@@ -1,5 +1,4 @@
-import {Statistic, Task} from "@/types/task.types";
-import {Base} from "@/types/root.types";
+import {UserResponse} from "@/types/user.types";
 
 export type AuthForm = {
     email: string
@@ -8,16 +7,7 @@ export type AuthForm = {
 
 export type AuthResponse = {
     accessToken: string
-    user: User
+    user: UserResponse
 }
 
 
-export type User = Base & {
-    email: string
-    name?: string
-    workInterval?: number
-    breakInterval?: number
-    intervalsCount?: number
-    tasks: Task[]
-    statistics: Statistic[]
-}

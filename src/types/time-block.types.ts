@@ -8,3 +8,4 @@ export type TimeBlock = Base & {
     userId: string
 }
 export type TypeTimeBlockFormState = Partial<Omit<TimeBlock, 'createdAt' | 'updatedAt'>>
+export type UpdateOrderTimeBlocks = string[]
