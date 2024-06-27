@@ -1,11 +1,11 @@
 import {axiosWithAuth} from "@/api/interceptors";
-import {TypeUserFormState, UserResponse, UserUpdateResponse} from "@/types/user.types";
 import {
     DeleteSessionResponse,
     PomodoroRound,
     PomodoroSession,
     TypePomodoroRoundState,
-    TypePomodoroSessionState, UpdateSessionResponse
+    TypePomodoroSessionState,
+    UpdateSessionResponse
 } from "@/types";
 
 class PomodoroService {

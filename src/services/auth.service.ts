@@ -1,5 +1,5 @@
 import {AuthForm, AuthResponse} from "@/types";
-import {axiosClassic, axiosWithAuth} from "@/api/interceptors";
+import {axiosClassic} from "@/api/interceptors";
 import {removeFromCookieStorage, saveTokenCookieStorage} from "@/services/auth-token.service";
 
 class AuthService {

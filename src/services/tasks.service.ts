@@ -1,6 +1,5 @@
 import {axiosWithAuth} from "@/api/interceptors";
-import {TypeUserFormState, UserResponse, UserUpdateResponse} from "@/types/user.types";
-import {Task, TimeBlock, TypeTaskFormState, TypeTimeBlockFormState, UpdateOrderTimeBlocks} from "@/types";
+import {Task, TypeTaskFormState} from "@/types";
 
 class TasksService {
     private BASE_URL = '/user/tasks'

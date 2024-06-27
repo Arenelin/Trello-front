@@ -1,5 +1,4 @@
 import {axiosWithAuth} from "@/api/interceptors";
-import {TypeUserFormState, UserResponse, UserUpdateResponse} from "@/types/user.types";
 import {TimeBlock, TypeTimeBlockFormState, UpdateOrderTimeBlocks} from "@/types";
 
 class TimeBlocksService {
