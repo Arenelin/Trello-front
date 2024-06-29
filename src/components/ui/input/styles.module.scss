@@ -1,0 +1,136 @@
+.root {
+  width: 100%;
+}
+
+.inputContainer {
+  position: relative;
+  width: 100%;
+
+  .label {
+    line-height: var(--line-height-m);
+    color: var(--color-dark-100);
+  }
+
+  .labelDisabled {
+    color: var(--color-dark-300);
+  }
+}
+
+.iconStart {
+  position: absolute;
+  bottom: 9px;
+  left: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-dark-100);
+
+  & svg {
+    color: inherit;
+  }
+}
+
+.activeIconStart {
+  color: var(--color-light-100);
+}
+
+.disabledIconStart {
+  color: var(--color-dark-300);
+}
+
+.input {
+  width: 100%;
+  padding: 6px 35px 6px 12px;
+
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-m);
+  color: var(--color-light-100);
+
+  background-color: inherit;
+  border: 1px solid var(--color-dark-300);
+  border-radius: 2px;
+
+  transition:
+    background-color,
+    border-color 0.2s ease-in-out;
+
+  &::placeholder {
+    color: var(--color-dark-100);
+  }
+
+  &::-webkit-search-cancel-button {
+    visibility: hidden;
+  }
+
+  &:focus-visible {
+    border-color: var(--color-info-700);
+    outline: 1px solid var(--color-info-700);
+  }
+
+  &:hover {
+    background-color: var(--color-dark-700);
+  }
+
+  &:active {
+    border: 1px solid var(--color-light-100);
+
+    &::placeholder {
+      color: var(--color-light-100);
+    }
+
+    & ~ .iconStart {
+      color: var(--color-light-100);
+    }
+  }
+
+  &:disabled {
+    background-color: inherit;
+    border: 1px solid var(--color-dark-300);
+
+    &::placeholder,
+    & ~ .iconStart {
+      color: var(--color-dark-300);
+    }
+  }
+}
+
+.searchInput {
+  padding: 6px 35px 6px 42px;
+}
+
+.errorInput {
+  color: var(--color-danger-300);
+  border: 1px solid var(--color-danger-300);
+
+  &::placeholder {
+    color: var(--color-danger-300);
+  }
+}
+
+.iconEnd {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 2px;
+
+  &:disabled {
+    cursor: default;
+
+    & svg {
+      color: var(--color-dark-300);
+    }
+  }
+
+  &:focus-visible {
+    border-color: var(--color-info-700);
+    outline: 1px solid var(--color-info-700);
+  }
+}

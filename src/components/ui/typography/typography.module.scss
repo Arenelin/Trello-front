@@ -1,0 +1,69 @@
+@mixin typography-styles($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+.default {
+  color: var(--color-light-100);
+}
+
+.h1 {
+  @include typography-styles(var(--font-size-xxl), var(--font-weight-bold), var(--line-height-l));
+}
+
+.h2 {
+  @include typography-styles(var(--font-size-xl), var(--font-weight-bold), var(--line-height-l));
+}
+
+.h3 {
+  @include typography-styles(var(--font-size-l), var(--font-weight-bold), var(--line-height-m));
+}
+
+.h4,
+.subtitle1 {
+  @include typography-styles(var(--font-size-m), var(--font-weight-bold), var(--line-height-l));
+}
+
+.body1 {
+  @include typography-styles(var(--font-size-m), var(--font-weight-regular), var(--line-height-l));
+}
+
+.body2 {
+  @include typography-styles(var(--font-size-s), var(--font-weight-regular), var(--line-height-l));
+}
+
+.subtitle2 {
+  @include typography-styles(var(--font-size-s), var(--font-weight-bold), var(--line-height-l));
+}
+
+.caption {
+  @include typography-styles(var(--font-size-xs), var(--font-weight-regular), var(--line-height-s));
+}
+
+.overline {
+  @include typography-styles(var(--font-size-xs), var(--font-weight-bold), var(--line-height-s));
+}
+
+.link1 {
+  @include typography-styles(var(--font-size-s), var(--font-weight-regular), var(--line-height-m));
+}
+
+.link2 {
+  @include typography-styles(var(--font-size-xs), var(--font-weight-regular), var(--line-height-s));
+}
+
+.link1,
+.link2,
+.link1:visited,
+.link2:visited {
+  color: var(--color-info-500);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.error {
+  @include typography-styles(var(--font-size-xs), var(--font-weight-regular), var(--line-height-m));
+
+  color: var(--color-danger-300);
+}
